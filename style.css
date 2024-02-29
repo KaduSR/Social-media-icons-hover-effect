@@ -1,0 +1,55 @@
+@import url('https://use.fontawesome.com/releases/v6.5.1/css/all.css');
+
+.icons {
+  display: flex;
+  gap: 25px;  
+}
+
+.icon {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    transition: all 1.5s;
+}
+
+svg circle {
+    stroke: var(--clr);
+    stroke-dasharray: 50;
+    opacity: 1;
+    transition: 1.5s;
+}
+
+.icon span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.icon span i {
+    font-size: 35px;
+    transition: 1.5s;
+}
+
+.icon:hover {
+    background: var(--clr);    
+}
+
+.icon:hover svg circle {
+    stroke:white;
+    stroke-dasharray:300;
+    opacity: 1;
+}
+
+.icon:hover span i {
+    color: white; 
+}
+
+.icon:hover .icon {
+    filter: blur(4px);
+}
+
+.icon:hover {
+    filter:blur(0) !important;
+}
